@@ -11,9 +11,9 @@ require("./startup/db")();
 require("./startup/config")();
 require("./startup/validation")();
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname + "/client/build/index.html"));
+// });
 
 const port = process.env.PORT || config.get("port");
 const server = app.listen(port, () =>

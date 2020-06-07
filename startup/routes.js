@@ -11,7 +11,7 @@ const error = require("../middleware/error");
 
 module.exports = function (app) {
   app.use(express.json());
-  app.use(express.static(path.join(__dirname, "client/build")));
+  //app.use(express.static(path.join(__dirname, "client/build")));
   app.use("/api/genres", genres);
   app.use("/api/customers", customers);
   app.use("/api/movies", movies);
